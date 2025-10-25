@@ -1,0 +1,30 @@
+[package]
+name = "rust_sqlite_async"
+version = "0.1.0"
+authors = ["venantvr <venantvr@gmail.com>"]
+description = "A thread-safe SQLite3 wrapper that performs writes in a background thread for non-blocking operations."
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+# La bibliothèque SQLite de référence en Rust
+rusqlite = { version = "0.32", features = ["bundled", "unlock_notify"] }
+
+# Pour le logging, équivalent à 'logging' en Python
+log = "0.4"
+
+# --- NOUVELLES DÉPENDANCES ---
+
+# Pool de connexions générique
+r2d2 = "0.8"
+# Gestionnaire de pool pour rusqlite
+r2d2_sqlite = "0.25"
+# Canal MPSC haute performance et borné (pour la contre-pression)
+crossbeam-channel = "0.5.13"
+tempfile = "3.23.0"
+
+
+[dev-dependencies]
+# Une implémentation simple de 'log' pour les tests/exemples
+env_logger = "0.11.3"
