@@ -92,3 +92,7 @@ fn main() {
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
+
+## Stack
+
+[![Stack](https://skillicons.dev/icons?i=rust,sqlite,py&theme=dark)](https://skillicons.dev)
